@@ -1,12 +1,12 @@
-"""Enter your own parentheses. The main classes are in main.py."""
+"""Run the Lab 1 parentheses check with the refactored logger."""
 
-from main import Logger, LogLevel, ParenthesesValidator
+from main import Formatter, Logger, LogLevel, ParenthesesValidator
 
 
 def main():
     Logger.set_level(LogLevel.TRACE)
-    Logger.set_format("[%l] %n: %m")
     validator = ParenthesesValidator()
+    validator.logger.formatter = Formatter("[%l] %n: %m")
 
     print("Lab 1: Parentheses Validator")
     print("Enter parentheses, for example (()). Enter q to exit.")

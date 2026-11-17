@@ -1,0 +1,24 @@
+# Additional cases: physical size, equal monitors and invalid measurements.
+
+MANAGER Eva
+MANAGER Dan
+DISPLAY Small-4K 3840 2160 220
+DISPLAY Large-FHD 1920 1080 80
+DISPLAY Equal-A 1920 1080 100
+DISPLAY Equal-B 1920 1080 100
+COMPARE Small-4K Large-FHD
+COMPARE Equal-A Equal-B
+ASSIGN Equal-A Eva
+ASSIGN Equal-A Dan
+BUY Equal-A Eva
+ASSIST Dan
+BUY Large-FHD Eva
+DISPLAY Zero-PPI 1920 1080 0
+DISPLAY Negative-Width -1920 1080 100
+DISPLAY Not-Finite 1920 1080 nan
+DISPLAY Infinite 1920 1080 inf
+DISPLAY Decimal-Width 1920.5 1080 100
+MANAGER Too Many Names
+DISPLAY Equal-B 1920 1080 100
+ASSIGN Equal-B Eva Extra
+ASSIST Eva
